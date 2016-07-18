@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/shop_index.css"/>
+
+    <style>
+        .mui-card .mui-control-content {
+            padding: 10px;
+        }
+        .mui-control-content {
+            height: 150px;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: #fff;">
+
+<div id="header" class="s-mui-bar s-mui-bar-nav" style="text-align: center">
+    <div class="mui-input-row mui-search" style="display: inline-block; padding-top: 5px; width:80%; margin-left: 10px;">
+        <input type="search" class="mui-input-clear" placeholder="">
+    </div>
+    <a id="classify" class="mui-icon mui-icon-list mui-pull-left" ></a>
+    <a class="mui-icon mui-icon-left-nav mui-pull-right"></a>
+</div>
+
+
+
+<div id="slider" class="mui-slider" style="margin-top: 44px;" >
+    <div class="mui-slider-group mui-slider-loop" id="slide">
+        <!--图片-->
+    </div>
+    <div class="mui-slider-indicator" id="spot">
+        <!--点-->
+    </div>
+</div>
+
+
+<div class="s-mui-content">
+    <div style="padding: 10px 10px;">
+        <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+            <a class="mui-control-item  mui-active" href="#item1">
+                狗狗
+            </a>
+            <a class="mui-control-item" href="#item2">
+                猫猫
+            </a>
+            <a class="mui-control-item" href="#item3">
+                小宠
+            </a>
+            <a class="mui-control-item" href="#item4">
+                水族
+            </a>
+        </div>
+    </div>
+    <div>
+        <div id="item1" class="mui-control-content mui-active">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li id="gouliang"  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color1 iconfont icon-iconfontcanyin"></span>
+                        <div class="mui-media-body">狗粮</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color2 iconfont icon-guantou"></span>
+                        <div class="mui-media-body">罐头</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color3 iconfont icon-lingshi-copy"></span>
+                        <div class="mui-media-body">零食</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-yiliao"></span>
+                        <div class="mui-media-body">保健</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-yiliao1"></span>
+                        <div class="mui-media-body">医疗</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color6 iconfont icon-xiyuyongpin"></span>
+                        <div class="mui-media-body">香波</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color7 iconfont icon-rzyp"></span>
+                        <div class="mui-media-body">用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color8 iconfont icon-gengduo"></span>
+                        <div class="mui-media-body">更多</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slider-content">
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            医疗保健
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/00.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/01.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/03.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/04.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            日常护理
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/10.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/11.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/12.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/13.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            家居用品
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/20.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/21.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/22.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/23.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="item2" class="mui-control-content">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li id="gouliang"  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color1 iconfont icon-iconfontcanyin"></span>
+                        <div class="mui-media-body">干粮</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color2 iconfont icon-guantou"></span>
+                        <div class="mui-media-body">湿粮</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color3 iconfont icon-lingshi-copy"></span>
+                        <div class="mui-media-body">零食</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-yiliao"></span>
+                        <div class="mui-media-body">保健</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-yiliao1"></span>
+                        <div class="mui-media-body">医疗</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color6 iconfont icon-xiyuyongpin"></span>
+                        <div class="mui-media-body">香波</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color7 iconfont icon-rzyp"></span>
+                        <div class="mui-media-body">用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color8 iconfont icon-gengduo"></span>
+                        <div class="mui-media-body">更多</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slider-content">
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            医疗保健
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/00.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/01.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/03.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/04.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            日常护理
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/10.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/11.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/12.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/13.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            家居用品
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/20.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/21.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/22.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/23.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="item3" class="mui-control-content">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li id="gouliang"  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color1 iconfont icon-iconfontcanyin"></span>
+                        <div class="mui-media-body">兔兔用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color2 iconfont icon-guantou"></span>
+                        <div class="mui-media-body">仓鼠用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color3 iconfont icon-lingshi-copy"></span>
+                        <div class="mui-media-body">龙猫用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-yiliao"></span>
+                        <div class="mui-media-body">荷兰猪用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color8 iconfont icon-gengduo"></span>
+                        <div class="mui-media-body">更多</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slider-content">
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            医疗保健
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/00.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/01.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/03.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/04.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            日常护理
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/10.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/11.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/12.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/13.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            家居用品
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/20.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/21.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/22.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/23.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="item4" class="mui-control-content">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li id="gouliang"  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color1 iconfont icon-hekriconshebeizhuijiayugang"></span>
+                        <div class="mui-media-body">水族箱</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color2 iconfont icon-shuyezuo"></span>
+                        <div class="mui-media-body">装饰</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color3 iconfont icon-lingshiniunai"></span>
+                        <div class="mui-media-body">药水</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-guolv"></span>
+                        <div class="mui-media-body">过滤器</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color5 iconfont icon-iconfontfertilize"></span>
+                        <div class="mui-media-body">鱼饲料</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color6 iconfont icon-exiweiyang"></span>
+                        <div class="mui-media-body">蜥蜴用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color7 iconfont icon-untitled"></span>
+                        <div class="mui-media-body">陆龟用品</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                    <a href="#">
+                        <span class="iconbg color8 iconfont icon-gengduo"></span>
+                        <div class="mui-media-body">更多</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slider-content">
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            医疗保健
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/00.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/01.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/03.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/04.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            日常护理
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/10.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/11.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/12.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/13.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <a>
+                            家居用品
+                        </a>
+                    </div>
+                    <div class="content-con">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/20.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/21.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/22.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../source/images/23.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/appcan.js"></script>
+<script src="../js/appcan.control.js"></script>
+
+<script src="../js/mui.min.js"></script><!--mui-->
+<script type="text/javascript" charset="utf-8">
+
+    appcan.ready(function(){
+
+        getslide();
+        getlist(1);
+        getlist(4);
+        getlist(11);
+    })
+
+    appcan.button("#gouliang", "btn-act", function() {
+        appcan.window.open({name:"goods_list",data:"shop_goodsLists.html",aniId:2});
+    })
+    appcan.button("#classify", "btn-act", function() {
+        appcan.window.open({name:"classify",data:"shop_classify.html",aniId:2});
+    })
+
+
+    function getslide(){
+        var url = YY_URL +"/api.php/Test/getslide";
+        appcan.request.ajax({
+            url:url,
+            type:'post',
+            success:function(data){
+                var data =  JSON.parse($.trim(data));
+
+                var dt = data.data;
+                $("#spot").append(
+                        '<div class="mui-indicator mui-active"></div>'
+                );
+                $("#slide").append(
+                        '<div class="mui-slider-item">'+
+                        '    <a href="#">'+
+                        '        <img src="'+dt[data.success-1].banner_pic+'">'+
+                        '    </a>'+
+                        '</div>'
+                );
+                for(o in dt){
+                    $("#slide").append(
+                            '<div class="mui-slider-item">'+
+                            '    <a href="#">'+
+                            '        <img src="'+dt[o].banner_pic+'">'+
+                            '    </a>'+
+                            '</div>'
+                    );
+                    if(o>0){
+                        $("#spot").append(
+                                '<div class="mui-indicator"></div>'
+                        );
+                    }
+                }
+                $("#slide").append(
+                        '<div class="mui-slider-item">'+
+                        '    <a href="#">'+
+                        '        <img src="'+dt[0].banner_pic+'">'+
+                        '    </a>'+
+                        '</div>'
+                );
+                var gallery = mui('.mui-slider');
+                gallery.slider({
+                    interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+                });
+
+            }
+
+        })
+    }
+    function getlist(id){
+
+        var url = YY_URL + "/api.php/Test/getlist";
+        appcan.request.ajax({
+            url:url,
+            data:{
+                type:id
+            },
+            type:'post',
+            success:function(data){
+                if(id==1){
+                    lid = 2;
+                }
+                if(id==4){
+                    lid = 3;
+                }
+                if(id==11){
+                    lid = 4;
+                }
+
+                var data = JSON.parse($.trim(data));
+                dt = data.data;
+                for(o in dt){
+                    $("#item"+lid+"-list").append(
+                            '<li class="mui-table-view-cell">' +
+                            dt[o].article_title+
+                            '</li>'
+                    )
+                }
+            }
+
+        })
+    }
+</script>
+</body>
+
+</html>

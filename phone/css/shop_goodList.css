@@ -1,0 +1,132 @@
+.list-content{
+    box-sizing: content-box;
+    height: 100px;
+    padding:20px;
+    background-color: #ffffff;
+}
+.list-content .goods-img{
+    height:100%;
+    width:80px;
+}
+img{
+    width:100% !important;
+    height: 100% !important;
+    margin: 0px !important;
+}
+.goods-content{
+    height:100%;
+    /*width:100%;*/
+}
+.goods-t-l{
+    width:100%;
+    height:80px;
+}
+.goods-title{
+    width: 100%;
+
+}
+.goods-title p{
+    font-size: 12px;
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    width: 100%;/*不允许出现半汉字截断*/
+    color: #000;
+    line-height: 100%;
+    padding-top: 5px;
+}
+.goods-label{
+    margin-top:4px;
+    width:100%;
+}
+.goods-info{
+    height: 20px;
+    width:100%;
+}
+.goods-info a{
+    font-size: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #8f8f94;
+}
+.price{
+    font-size: 14px !important;
+    color: #f94b1e !important;
+    line-height: 16px;
+    margin-right:4px;
+}
+.mui-table-view-cell{
+    padding: 0 !important;
+}
+/*.mui-backdrop {*/
+    /*position: fixed;*/
+    /*top: 0px;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*z-index: 998;*/
+    /*background-color: #efeff4;*/
+/*}*/
+
+html,body {
+    background-color: #efeff4;
+}
+.app-icon{
+    padding-right: 16px;
+}
+/*p {*/
+    /*text-indent: 22px;*/
+/*}*/
+span.mui-icon {
+    font-size: 14px;
+    color: #007aff;
+    margin-left: -15px;
+    padding-right: 10px;
+}
+.mui-off-canvas-right {
+    color: #fff;
+}
+.title {
+    margin: 35px 15px 10px;
+}
+.title .content {
+    margin: 10px 15px 35px;
+    color: #bbb;
+    text-indent: 1em;
+    font-size: 14px;
+    line-height: 24px;
+}
+input {
+    color: #000;
+}
+.pop-list{
+    background-color: #e4e4e4;
+
+}
+.app-classify{
+    width: 33.3%;
+    height: 50px;
+    box-sizing: border-box;
+    border-left: 10px solid #e4e4e4;
+    border-top: 10px solid #e4e4e4;
+    float: left;
+    text-align: center;
+    background-color: #ffffff;
+}
+.app-classify-font{
+    line-height: 40px;
+    color: #000000;
+}
+.app-classify-active{
+    color: #f94c29;
+}
+.iframe-list{
+    width: 100%;
+    height: 100%;
+    margin-top:50px;
+}
+.iframe-list iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}

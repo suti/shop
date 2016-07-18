@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/shop_icon.css">
+    <link rel="stylesheet" href="../css/shop_goodList.css">
+</head>
+
+<body>
+<!--侧滑菜单容器-->
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+    <!--菜单部分-->
+    <aside id="offCanvasSide" class="mui-off-canvas-right">
+        <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="title">价格筛选</div>
+                <div class="content">
+                    这是可拖动式侧滑菜单示例，你可以在这里放置任何内容；关闭侧滑菜单有多种方式： 1.在手机屏幕任意位置向右拖动(drag)；2.点击本侧滑菜单页之外的任意位置; 3.点击如下红色按钮
+                    <span class="android-only">；4.Android手机按back键；5.Android手机按menu键
+                            </span>。
+                    <p style="margin: 10px 15px;">
+                        <button id="offCanvasHide" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
+                    </p>
+
+                </div>
+                <div class="title" style="margin-bottom: 25px;">侧滑列表示例</div>
+
+            </div>
+        </div>
+    </aside>
+    <div class="mui-inner-wrap">
+        <span class="iconfont mui-pull-right">&#xe624;</span>
+
+        <header class="mui-bar mui-bar-nav" id="head-bar">
+            <a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+
+            <a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-pull-right" style="font-size: 16px;line-height: 28px">筛选</a>
+            <a id="app-icon" class="iconfont mui-pull-right mui-icon app-icon icon-tupianyangshi"></a>
+            <div class="mui-input-row mui-search" style="display: inline-block; margin-top: 2px; width:68%;">
+                <input type="search" class="mui-input-clear" placeholder="">
+            </div>
+        </header>
+
+        <div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll" style="height: 100%;">
+                <div class="" style="height: 100%">
+                    <nav class="mui-bar mui-bar-tab" style="top:0px">
+                        <a class="mui-tab-item fenlei" id="fenlei" href="#">分类</a>
+                        <a class="mui-tab-item" href="#p1">销量</a>
+                        <a class="mui-tab-item" href="#Popover_2">价格</a>
+                        <a class="mui-tab-item" href="#Popover_3">评论</a>
+                    </nav>
+                    <div class="mui-bar mui-hidden fenleipop pop-list" style="top:50px;height:auto;">
+                        <div class="app-classify">
+                            <a class="app-classify-font app-classify-active" href="">
+                                全部
+                            </a>
+                        </div>
+                        <div class="app-classify">
+                            <a class="app-classify-font" href="">
+                                离乳期犬粮
+                            </a>
+                        </div>
+                        <div class="app-classify">
+                            <a class="app-classify-font" href="">
+                                幼犬粮
+                            </a>
+                        </div>
+                        <div class="app-classify">
+                            <a class="app-classify-font" href="">
+                                成犬粮
+                            </a>
+                        </div>
+                        <div class="app-classify">
+                            <a class="app-classify-font" href="">
+                                老犬粮
+                            </a>
+                        </div>
+                        <div class="app-classify">
+                            <a class="app-classify-font" href="">
+                                全犬粮
+                            </a>
+                        </div>
+                    </div>
+                    <div id="shop-list" class="iframe-list" >
+                        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+                            <div class="mui-scroll" style="top: 50px;">
+                                <!--数据列表-->
+                                <ul class="mui-table-view mui-table-view-chevron">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- off-canvas backdrop -->
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <!--<script src="../js/appcan.js"></script>-->
+    <!--<script src="../js/appcan.control.js"></script>-->
+    <script>
+        mui.init({
+            swipeBack: false,
+            pullRefresh: {
+                container: '#pullrefresh',
+                down: {
+                    callback: pulldownRefresh
+                },
+                up: {
+                    contentrefresh: '正在加载...',
+                    callback: pullupRefresh
+                }
+            }
+        });
+
+        var appIcon=document.querySelector('.app-icon');
+
+        mui.ready(function(){
+            appPopdown('.fenlei');
+            var temp=((document.querySelector('#head-bar').offsetWidth-20)*0.32-86)/2;
+            document.querySelector('.mui-search').style.left=temp+'px';
+            appIcon.style.padding='10px 16px 10px 10px';
+            appIcon.addEventListener('tap',function () {
+                if(appIcon.classList.contains("icon-tupianyangshi")){
+                    appIcon.classList.remove("icon-tupianyangshi");
+                    appIcon.classList.add("icon-listtable");
+                    appIcon.style.padding='10px 11px 10px 15px';
+
+                }else{
+                    appIcon.classList.remove("icon-listtable");
+                    appIcon.classList.add("icon-tupianyangshi");
+                    appIcon.style.padding='10px 16px 10px 10px';
+                }
+            });
+            document.querySelector('li').addEventListener('tap',function () {
+                
+            })
+        });
+
+        function appPopdown(cName){
+            document.querySelector(cName).addEventListener('tap',function(){
+                var d=document.querySelector(cName+'pop');
+                var mask01 = mui.createMask(function(){
+                    d.classList.add('mui-hidden');
+                    document.querySelector('.pop-list').style.height="auto";
+                });//callback为用户点击蒙版时自动执行的回调；
+                if(d.classList.contains('mui-hidden')){
+                    d.classList.remove('mui-hidden');
+                    mask01.show();//显示遮罩
+                    var height=d.offsetHeight+104;
+                    document.querySelector('.pop-list').style.height=document.querySelector('.pop-list').offsetHeight+10+"px";
+                    document.querySelector('.mui-backdrop').style.top=height+"px";
+                }else{
+                    document.querySelector('.pop-list').style.height="auto";
+                    d.classList.add('mui-hidden');
+                    if(document.querySelector('.mui-backdrop')){
+                        document.querySelector('.mui-backdrop').remove();
+                    }
+                }
+            });
+        }
+
+        //侧滑容器父节点
+        var offCanvasWrapper = mui('#offCanvasWrapper');
+        document.getElementById('offCanvasHide').addEventListener('tap', function() {
+            offCanvasWrapper.offCanvas('close');
+        });
+        //主界面和侧滑菜单界面均支持区域滚动；
+        mui('#offCanvasSideScroll').scroll();
+//        mui('#offCanvasContentScroll').scroll();
+        //实现ios平台的侧滑关闭页面；
+        if (mui.os.plus && mui.os.ios) {
+            offCanvasWrapper[0].addEventListener('shown', function(e) { //菜单显示完成事件
+                plus.webview.currentWebview().setStyle({
+                    'popGesture': 'none'
+                });
+            });
+            offCanvasWrapper[0].addEventListener('hidden', function(e) { //菜单关闭完成事件
+                plus.webview.currentWebview().setStyle({
+                    'popGesture': 'close'
+                });
+            });
+        }
+
+        var string='<style>.goods-content{width:';
+        string+=document.querySelector('.mui-table-view').offsetWidth-120+'px';
+        string+=';}';
+        document.querySelector('head').innerHTML+=string;
+        var ulWidth=document.querySelector('ul').offsetWidth;
+        var wm=(ulWidth%160)/(ulWidth/180+1)+"px";
+
+        function pushList(data){
+            var list=data;
+            var lable='<span class="mui-badge mui-badge-success">多买多优惠</span><span class="mui-badge mui-badge-warning">赠豆</span><span class="mui-badge mui-badge-danger">会员价</span>';
+            var string=" ";
+            for(var i=0;i<list.length;i++){
+                var li = document.createElement('li');
+                var div = document.createElement('div');
+                li.className = 'mui-table-view-cell';
+                li.innerHTML='<div class="list-content" id="'+list[i].goodsId+'"><div class="goods-img mui-pull-left"><img src="'
+                        +list[i].goodsImg+'" alt="" class=" mui-pull-left"></div><div class="mui-pull-left goods-content">'
+                        +'<div class="goods-t-l"><div class="goods-title"><p href="">'+list[i].goodsTitle+'</p></div><div class="goods-label">'
+                        +lable+'</div></div><div class="goods-info"><a class="price mui-pull-left">'+list[i].goodsPrice
+                        +'元</a><a class="comment mui-pull-left">评价'+list[i].goodsComment+'</a><a class="volume mui-pull-right">已售'+list[i].goodsVolume
+                        +'</a></div></div></div>';
+                div.appendChild(li);
+                string+=div.innerHTML;
+            }
+            return string;
+        }
+        /**
+         * 下拉刷新具体业务实现
+         */
+        function pulldownRefresh() {
+            mui.ajax('goodslist.json',{
+                dataType:'json',
+                success:function (data) {
+                    var s=pushList(data.list);
+                    var table = document.body.querySelector('.mui-table-view');
+                    table.innerHTML=s;
+                },
+                error:function(xhr,type,errorThrown){
+                    //异常处理；
+                    console.log(type);
+                }
+            });
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+        }
+        var count = 0;
+        /**
+         * 上拉加载具体业务实现
+         */
+        function pullupRefresh() {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh(0);
+            mui.ajax('goodslist.json',{
+                dataType:'json',
+                success:function (data) {
+                    var s=pushList(data.list);
+                    var table = document.body.querySelector('.mui-table-view');
+                    table.innerHTML+=s;
+//                document.querySelector('.goods-content').style.width=document.querySelector('.goods-content').offsetWidth-180+'px';
+                },
+                error:function(xhr,type,errorThrown){
+                    //异常处理；
+                    console.log(type);
+                }
+            });
+        }
+        if (mui.os.plus) {
+            mui.plusReady(function() {
+                mui('#pullrefresh').pullRefresh().pullupLoading();
+            });
+        } else {
+            mui.ready(function() {
+                mui('#pullrefresh').pullRefresh().pullupLoading();
+                var p=document.getElementById("app-icon");
+                p.addEventListener('tap',function () {
+//                    var mask = mui.createMask();//callback为用户点击蒙版时自动执行的回调；
+//                    mask.show();//显示遮罩
+//                var temp=document.querySelector('#pullrefresh').innerHTML;
+//                document.querySelector('#pullrefresh').innerHTML="";//特别极端的应对bug方法,会使所有监听失效
+                    document.querySelector('#pullrefresh').style.display="hidden";
+                    if(p.classList.contains("icon-listtable")){
+//                    document.querySelector('.mui-pull-top-pocket').style.display="hidden";
+                        document.querySelector('head style').remove();
+
+                        document.querySelector('head').innerHTML+="<style> .list-content{height: 200px;width: 140px;padding: 20px 10px 20px 10px;}"+
+                                ".list-content .goods-img{height:100px;width:100%;} .goods-content{height:80px;width:100%;}"+
+                                ".goods-t-l{height:80px;} li{width:160px;float:left;margin-top:10px;margin-left: "+wm+";}.price{width:100%;margin:0 !important;}"+
+                                "       </style>";
+//                    document.querySelector('.mui-pull-top-pocket').style.display="block";
+
+
+                    }else{
+//                    document.querySelector('.mui-pull-top-pocket').style.display="hidden";
+                        document.querySelector('head style').remove();
+                        document.querySelector('head').innerHTML+=string;
+//                    document.querySelector('.mui-pull-top-pocket').style.display="block";
+
+                    }
+//                    mask.close();//关闭遮罩
+
+//                document.querySelector('#pullrefresh').innerHTML=temp;
+//                mui('.mui-scroll-wrapper').scroll();
+                    document.querySelector('#pullrefresh').style.display="block";
+                })
+            });
+        }
+    </script>
+</body>
+
+</html>
