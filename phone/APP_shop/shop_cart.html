@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shop_cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <style>
+        #buy-bar{
+            width:100%;
+            height:52px;
+            padding:0;
+        }
+        #buy-bar .total{
+            width: 70%;
+            height: 100%;
+            background-color: #606060;
+            text-align: left;
+        }
+        #buy-bar .total-p{
+            margin-left: 50px;
+        }
+        #buy-bar .totalA1{
+            line-height: 28px;
+            color: #959595;
+            font-size: 16px;
+        }
+        #buy-bar .totalA2{
+            color: #ffffff;
+            font-size: 16px;
+        }
+        #buy-bar .totalA3{
+            color: #959595;
+            font-size: 12px;
+        }
+        #buy-bar .pay{
+            width: 30%;
+            height: 100%;
+            background-color: #f94b1e;
+            text-align: center;
+        }
+        #buy-bar .payA{
+            color: #ffffff;
+            line-height: 52px;
+            font-size:16px;
+        }
+
+        .goodsInfSimple{
+            width: 100%;
+            height:116px;
+            padding: 8px;
+            background-color: #ffffff;
+            /*-webkit-box-sizing: content-box;*/
+            /*-moz-box-sizing: content-box;*/
+            /*box-sizing: content-box;*/
+            margin-bottom: 2px;
+        }
+        .goodsInfSimple-content{
+            width: 100%;
+            height:100%;
+        }
+        .goodsInfSimple-content .img{
+            width:25%;
+            height: 100%;
+        }
+        .goodsInfSimple-content .img img{
+            width:100%;
+            height:100%;
+            box-shadow: 0 0 1px rgba(0,0,0,.85);
+            /*border:1px solid #4c4c4c;*/
+        }
+        .goodsIS-content{
+            padding-left: 6px;
+            width: 75%;
+            height:100%;
+        }
+        .goodsIS-title{
+            width: 100%;
+            height:80px;
+        }
+        .goodsIS-title p{
+            font-size: 16px;
+            color: #000;
+            line-height: 100%;
+            padding-top: 5px;
+            text-align: left;
+        }
+        .goodsIS-info{
+            height: 20px;
+            width:100%;
+        }
+        .goodsIS-info a{
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #8f8f94;
+        }
+        .goodsIS-info .price{
+            font-size: 16px !important;
+            color: #f94b1e !important;
+            width: auto;
+            line-height: 16px;
+            margin-right:4px;
+        }
+        #content{
+            top:44px;
+        }
+        #content li{
+            padding:10px 0 10px 35px;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <span class="mui-icon mui-icon-arrowleft"></span>
+        <h4 class="mui-title">购物车</h4>
+        <a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-pull-right" style="font-size: 16px;line-height: 28px">删除</a>
+    </header>
+    <nav id="buy-bar" class="mui-bar" style="bottom: 0;">
+        <div class="total mui-pull-left">
+            <div class="mui-input-row mui-checkbox mui-left">
+                <div class="total-p">
+                    <a class="totalA1">总金额:</a>
+                    <a class="totalA2">63.00元</a><br/>
+                    <a class="totalA3">已优惠:0.00元</a>
+                </div>
+                <input name="checkbox1" value="Item 1" type="checkbox" style="top: 12px;left: 10px;">
+            </div>
+        </div>
+        <div class="pay mui-pull-left">
+            <a class="payA">
+                结算(1)
+            </a>
+        </div>
+    </nav>
+    <div id="content" class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell" id="0000">
+                    <div class="mui-input-row mui-checkbox mui-left">
+                        <div class="goodsInfSimple">
+                            <div class="goodsInfSimple-content">
+                                <div class="img mui-pull-left">
+                                    <img src="temp.png" alt="" class=" mui-pull-left">
+                                </div>
+                                <div class="mui-pull-left goodsIS-content">
+                                    <div class="goodsIS-title">
+                                        <p>
+                                            法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                        </p>
+                                    </div>
+                                    <div class="goodsIS-info">
+                                        <a class="price mui-pull-left">63.00元</a>
+                                        <div class="mui-numbox mui-pull-right" data-numbox-min="1" data-numbox-max="9" style="top: -10px;">
+                                            <button class="mui-btn mui-btn-numbox-minus" type="button" disabled="">-</button>
+                                            <input id="test" class="mui-input-numbox" type="number" value="1">
+                                            <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                                        </div>
+                                        <a class="store mui-pull-right">数量:</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input name="checkbox1" value="Item 1" type="checkbox" style="left: -30px;top: 40px;">
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        mui.init();
+        mui(".mui-scroll-wrapper").scroll();
+    </script>s
+</body>
+</html>
