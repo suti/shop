@@ -107,8 +107,19 @@
         #content{
             top:44px;
         }
+        /*#content ul{*/
+            /*background-color: #efeff4;*/
+        /*}*/
         #content li{
-            padding:10px 0 10px 35px;
+            padding:10px 0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1px;
+            -webkit-box-shadow: 0 1px 1px #ccc;
+            box-shadow: 0 1px 1px #ccc;
+        }
+        #content li>div{
+            padding-left: 35px;
         }
     </style>
 </head>
@@ -138,7 +149,7 @@
     <div id="content" class="mui-scroll-wrapper">
         <div class="mui-scroll">
             <ul class="mui-table-view">
-                <li class="mui-table-view-cell" id="0000">
+                <li class="" id="0000">
                     <div class="mui-input-row mui-checkbox mui-left">
                         <div class="goodsInfSimple">
                             <div class="goodsInfSimple-content">
@@ -163,7 +174,35 @@
                                 </div>
                             </div>
                         </div>
-                        <input name="checkbox1" value="Item 1" type="checkbox" style="left: -30px;top: 40px;">
+                        <input name="checkbox1" value="Item 1" type="checkbox" style="left: 10px;top: 40px;">
+                    </div>
+                </li>
+                <li class="" id="0001">
+                    <div class="mui-input-row mui-checkbox mui-left">
+                        <div class="goodsInfSimple">
+                            <div class="goodsInfSimple-content">
+                                <div class="img mui-pull-left">
+                                    <img src="temp.png" alt="" class=" mui-pull-left">
+                                </div>
+                                <div class="mui-pull-left goodsIS-content">
+                                    <div class="goodsIS-title">
+                                        <p>
+                                            法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                        </p>
+                                    </div>
+                                    <div class="goodsIS-info">
+                                        <a class="price mui-pull-left">63.00元</a>
+                                        <div class="mui-numbox mui-pull-right" data-numbox-min="1" data-numbox-max="9" style="top: -10px;">
+                                            <button class="mui-btn mui-btn-numbox-minus" type="button" disabled="">-</button>
+                                            <input id="test01" class="mui-input-numbox" type="number" value="1">
+                                            <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                                        </div>
+                                        <a class="store mui-pull-right">数量:</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input name="checkbox1" value="Item 1" type="checkbox" style="left: 10px;top: 40px;">
                     </div>
                 </li>
             </ul>
@@ -172,8 +211,19 @@
     </div>
     <script src="../js/mui.min.js"></script>
     <script>
-        mui.init();
+        mui.init({
+            swipeBack:true //启用右滑关闭功能
+        });
         mui(".mui-scroll-wrapper").scroll();
-    </script>s
+//        window.removeEventListener('touchstart','li');
+        mui('.mui-table-view').on('change', 'input', function() {
+            var value = this.checked?"true":"false";
+            console.log(value);
+        });
+        mui('#buy-bar').on('change', 'input', function() {
+            var value = this.checked?"true":"false";
+            console.log(value);
+        });
+    </script>
 </body>
 </html>
