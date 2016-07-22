@@ -7,11 +7,176 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../css/mui.min.css">
-    <sytle>
-
-    </sytle>
+    <style>
+        #nav{
+            height: 80px;
+            width:100%;
+            text-align: center;
+            box-shadow: none !important;
+            background-color: #fefefe;
+        }
+        .mui-content{
+            background-color: #ffffff;
+        }
+        nav button{
+            width: 86%;
+            height: 40px;
+            display: inline-block;
+            border: 1px solid #ef3338 !important;
+            background-color: #ef3338 !important;
+        }
+        .add-ul{
+            /*margin:0;*/
+            padding:0;
+            list-style:none;
+            background-color: #f0f2f5;
+        }
+        .add-li{
+            height:110px;
+            width:100%;
+            /*padding: ;*/
+            position: relative;
+            margin-top: 10px;
+            background-color: #ffffff;
+        }
+        .add-ul:first-child{
+            margin-top: 0;
+        }
+        .add-li:after{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            background-color: #c8c7cc;
+        }
+        .add-li .add-con{
+            height:70px;
+            width:100%;
+            padding: 0 10px;
+            padding-top: 6px;
+            text-align: center;
+            position: relative;
+        }
+        .add-con .name{
+            float: left;
+            color: #000000;
+            font-size:16px;
+        }
+        .add-con .phoneNo{
+            color: #000000;
+            font-size:16px;
+        }
+        .add-con .addCon{
+            margin-top: 10px;
+            float: left;
+            font-size: 14px;
+            color: #7e8083;
+        }
+        .add-con:after{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 15px;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            background-color: #c8c7cc;
+        }
+        .add-li .add-control{
+            padding: 0 8px;
+            height: 40px;
+            width:100%;
+        }
+        .controlA{
+            font-size: 14px;
+            line-height: 40px;
+            color: #7e8083;
+            margin-right: 8px;
+        }
+        .add-li .add-control .mui-icon{
+            font-size: 24px;
+            color: #7e8083;
+            line-height:40px;
+        }
+        .controlL{
+            margin-left: 28px;
+        }
+    </style>
 </head>
 <body>
-
+<header class="mui-bar mui-bar-nav">
+    <span class="mui-icon mui-icon-arrowleft"></span>
+    <h4 class="mui-title">收货地址管理</h4>
+</header>
+<nav id="nav" class="mui-bar" style="bottom: 0;">
+    <button type="button" class="mui-btn mui-btn-danger">
+        + 新建地址
+    </button>
+</nav>
+<div id="ContentScroll" class="mui-content mui-scroll-wrapper">
+    <div class="mui-scroll">
+        <ul class="add-ul">
+            <li class="add-li">
+                <div class="add-con">
+                    <a class="name">李明</a>
+                    <a class="phoneNo">150****9323</a><br/>
+                    <a class="addCon">山东省济南市市中区济微路666号</a>
+                </div>
+                <div class="add-control">
+                    <div class="mui-input-row mui-checkbox mui-left">
+                        <a class="controlA mui-pull-right">删除</a>
+                        <a class="mui-icon mui-icon-close mui-pull-right"></a>
+                        <a class="controlA mui-pull-right">编辑 </a>
+                        <a class="mui-icon mui-icon-compose mui-pull-right"></a>
+                        <a class="mui-pull-left controlA controlL">设为默认</a>
+                        <input name="checkbox1" value="Item 1" type="checkbox" style="top: 6px;left: 0;">
+                    </div>
+                </div>
+            </li>
+            <li class="add-li">
+                <div class="add-con">
+                    <a class="name">李明</a>
+                    <a class="phoneNo">150****9323</a><br/>
+                    <a class="addCon">山东省济南市市中区济微路666号</a>
+                </div>
+                <div class="add-control">
+                    <div class="mui-input-row mui-checkbox mui-left">
+                        <a class="controlA mui-pull-right">删除</a>
+                        <a class="mui-icon mui-icon-close mui-pull-right"></a>
+                        <a class="controlA mui-pull-right">编辑 </a>
+                        <a class="mui-icon mui-icon-compose mui-pull-right"></a>
+                        <a class="mui-pull-left controlA controlL">设为默认</a>
+                        <input name="checkbox1" value="Item 1" type="checkbox" style="top: 6px;left: 0;">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true ,//启用右滑关闭功能
+        pullRefresh: {
+            container: '.mui-scroll-wrapper',
+            down: {
+                callback: function () {
+                    console.log("success");
+                    mui('.mui-scroll-wrapper').pullRefresh().endPulldownToRefresh();
+                }
+            },
+            up: {
+                contentrefresh: '正在加载...',
+//                callback: pullupRefresh
+            }
+        }
+    });
+//    mui('.mui-scroll-wrapper').scroll();
+</script>
 </body>
 </html>

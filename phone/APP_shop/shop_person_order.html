@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>shop_person_order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <style>
+        .title{
+            left: 180px;
+        }
+        .bar-pop{
+            top:44px;
+            height:60px;
+            padding:0;
+        }
+        .bar-pop ul{
+            list-style: none;
+            margin: 0;
+            padding:0;
+        }
+        .bar-pop li{
+
+            float: left;
+            box-sizing: border-box;
+            width: 100px;
+            height:40px;
+            margin-top:10px;
+            margin-left:10px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .pop-active{
+            /*-webkit-box-shadow: 0 0 1px rgba(249,75,30,.85);*/
+            /*box-shadow: 0 0 1px rgba(249,75,30,.85);*/
+            border:1px #f94b1e solid;
+        }
+        .bar-pop a{
+            line-height: 40px;
+            color: #000;
+            font-size:16px;
+        }
+        .mui-scroll-wrapper{
+            top:44px;
+        }
+
+        .goodsInfSimple{
+            width: 100%;
+            height:116px;
+            padding: 8px;
+            background-color: #ffffff;
+            position: relative;
+            /*-webkit-box-sizing: content-box;*/
+            /*-moz-box-sizing: content-box;*/
+            /*box-sizing: content-box;*/
+            /*margin-bottom: 2px;*/
+        }
+        .goodsInfSimple:after{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            background-color: #c8c7cc;
+        }
+        .goodsInfSimple-content{
+            width: 100%;
+            height:100%;
+        }
+        .goodsInfSimple-content .img{
+            width:25%;
+            height: 100%;
+        }
+        .goodsInfSimple-content .img img{
+            width:100%;
+            height:100%;
+            box-shadow: 0 0 1px rgba(0,0,0,.85);
+            /*border:1px solid #4c4c4c;*/
+        }
+        .goodsIS-content{
+            padding-left: 6px;
+            width: 75%;
+            height:100%;
+        }
+        .goodsIS-title{
+            width: 100%;
+            height:80px;
+        }
+        .goodsIS-title p{
+            font-size: 14px;
+            color: #000;
+            line-height: 100%;
+            padding-top: 5px;
+            text-align: left;
+        }
+        .goodsIS-info{
+            height: 20px;
+            width:100%;
+        }
+        .goodsIS-info a{
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #8f8f94;
+        }
+        .goodsIS-info .price{
+            font-size: 16px !important;
+            color: #f94b1e !important;
+            width: auto;
+            line-height: 16px;
+            margin-right:4px;
+        }
+        ul{
+            background: #efefff !important;
+        }
+        li{
+            width: 100%;
+            height:190px;
+            background: #efeff4;
+            margin-bottom: 4px;
+        }
+        li .time{
+            width: 100%;
+            position: relative;
+            height:32px;
+            background-color: #ffffff;
+            /*margin-bottom: 2px;*/
+        }
+        li .time:after{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            content: '';
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            background-color: #c8c7cc;
+        }
+        li .time a{
+            font-size:16px;
+            color: #000;
+            line-height:32px;
+            margin-left: 8px;
+        }
+        li .time .mui-icon{
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        li .cmd{
+            width: 100%;
+            height:38px;
+            background-color: #ffffff;
+        }
+        li .cmd button{
+            margin:2px 4px 0 0;
+        }
+    </style>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <span class="mui-icon mui-icon-arrowleft"></span>
+    <h5 class=" mui-title">
+        全部订单
+    </h5>
+    <span class="title mui-icon mui-icon-arrowdown"></span>
+</header>
+<nav class="mui-bar bar-pop mui-hidden">
+    <ul>
+        <li class="pop-active">
+            <a>
+                已完成订单
+            </a>
+        </li>
+        <li>
+            <a>
+                未完成订单
+            </a>
+        </li>
+        <li>
+            <a>
+                已取消订单
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="mui-scroll-wrapper" id="content">
+    <div class="mui-scroll">
+        <ul class="mui-table-view">
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="time">
+                    <a class="mui-pull-left">2016.05.21</a>
+                    <a class="mui-icon mui-icon-trash mui-pull-right"></a>
+                </div>
+                <div class="goodsInfSimple">
+                    <div class="goodsInfSimple-content">
+                        <div class="img mui-pull-left">
+                            <img src="temp.png" alt="" class=" mui-pull-left">
+                        </div>
+                        <div class="mui-pull-left goodsIS-content">
+                            <div class="goodsIS-title">
+                                <p>
+                                    法国皇家ROYAL CANIN小型犬奶糕/怀孕/哺乳期母犬/离乳期幼犬奶糕1KG MIS30
+                                </p>
+                            </div>
+                            <div class="goodsIS-info">
+                                <a class="price mui-pull-right">63.00元</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <button type="button" class="mui-btn mui-btn-danger mui-pull-right">
+                        再来一单
+                    </button>
+                    <button type="button" class="mui-btn mui-btn-primary mui-pull-right">
+                        立即付款
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack:true,//启用右滑关闭功能
+        pullRefresh: {
+            container: '.mui-scroll-wrapper',
+            down: {
+                callback: function () {
+                    console.log("success");
+                    mui('.mui-scroll-wrapper').pullRefresh().endPulldownToRefresh();
+                }
+            },
+            up: {
+                contentrefresh: '正在加载...',
+//                callback: pullupRefresh
+            }
+        }
+    });
+//    mui('.mui-scroll-wrapper').scroll();
+    var list=document.querySelector('.bar-pop').classList;
+    var icon=document.querySelector('.title').classList;
+    var mask01=mui.createMask(function () {
+        list.add('mui-hidden');
+        icon.add('mui-icon-arrowdown');
+        icon.remove('mui-icon-arrowup');
+    });
+    function popPull() {
+        if(list.contains('mui-hidden')){
+            list.remove('mui-hidden');
+            mask01.show();
+            document.querySelector('.mui-backdrop').style.top='104px';
+            icon.remove('mui-icon-arrowdown');
+            icon.add('mui-icon-arrowup');
+        }else {
+            mask01.close();
+            list.add('mui-hidden');
+            icon.add('mui-icon-arrowdown');
+            icon.remove('mui-icon-arrowup');
+        }
+
+
+    }
+    mui.ready(function () {
+        var padWid=(document.querySelector('header').offsetWidth-300)/4;
+        console.log(padWid);
+        var li=document.querySelectorAll('.bar-pop li');
+        for(var i=0;i<li.length;i++){
+            li[i].style='margin-left:'+padWid+'px';
+        }
+        document.querySelector('.title').style.left=(document.querySelector('header').offsetWidth-20)/2+8+'px';
+        document.querySelector('header h5').addEventListener('click',popPull);
+        document.querySelector('header .title').addEventListener('click',popPull);
+    });
+
+</script>
+</body>
+</html>

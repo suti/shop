@@ -7,11 +7,201 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../css/mui.min.css">
-    <sytle>
-
-    </sytle>
+    <style>
+        html,content {
+            background-color: #ffffff;
+        }
+        #nav{
+            height: 80px;
+            width:100%;
+            text-align: center;
+            box-shadow: none !important;
+            background-color: #fefefe;
+        }
+        nav button{
+            width: 86%;
+            height: 40px;
+            display: inline-block;
+            border: 1px solid #ef3338 !important;
+            background-color: #ef3338 !important;
+        }
+        .area{
+            width: 65%;
+            height: 40px;
+        }
+        .area a{
+            line-height: 40px;
+            margin-right: 10px;
+            color: #c8c7cc;
+        }
+        #add{
+            height:300px;
+            background-color: #ffffff;
+            z-index: 999;
+        }
+        /*.mui-backdrop{*/
+            /*bottom: 300px;*/
+        /*}*/
+        .mui-control-content {
+            background-color: white;
+            min-height: 255px;
+        }
+        .mui-control-content .mui-loading {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
+<header class="mui-bar mui-bar-nav">
+    <span class="mui-icon mui-icon-arrowleft"></span>
+    <h4 class="mui-title">新建收货地址</h4>
+</header>
+<nav id="nav" class="mui-bar" style="bottom: 0;">
+    <button type="button" class="mui-btn mui-btn-danger">
+        保存
+    </button>
+</nav>
+<div id="add" class="mui-bar flag" style="bottom: -300px;">
+    <div id="slider" class="mui-slider">
+        <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item" href="#item1mobile">
+                省
+            </a>
+            <a class="mui-control-item" href="#item2mobile">
+                市
+            </a>
+            <a class="mui-control-item" href="#item3mobile">
+                县/区
+            </a>
+        </div>
+        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+        <div class="mui-slider-group">
+            <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">
+                                北京市
+                            </li>
+                            <li class="mui-table-view-cell">
+                                天津市
+                            </li>
+                            <li class="mui-table-view-cell">
+                                重庆市
+                            </li>
+                            <li class="mui-table-view-cell">
+                                第一个选项卡子项-4
+                            </li>
+                            <li class="mui-table-view-cell">
+                                第一个选项卡子项-5
+                            </li>
+                            <li class="mui-table-view-cell">
+                                第一个选项卡子项-5
+                            </li>
+                            <li class="mui-table-view-cell">
+                                第一个选项卡子项-5
+                            </li>
+                            <li class="mui-table-view-cell">
+                                第一个选项卡子项-5
+                            </li>
+                            <li class="mui-table-view-cell">
+                                第一个选项卡子项-5
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="item2mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll2" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-loading">
+                            <div class="mui-spinner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+
+            </div>
+            <div id="item3mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll3" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-loading">
+                            <div class="mui-spinner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content" style="margin-top: 45px;">
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <label>收货人:</label>
+            <input type="text" class="mui-input-clear" placeholder="">
+        </div>
+        <div class="mui-input-row">
+            <label>联系电话:</label>
+            <input type="text" class="mui-input-clear" placeholder="">
+        </div>
+
+        <div class="mui-input-row ">
+            <label>所在地区:</label>
+            <div class="area mui-pull-left">
+                <a class="mui-icon mui-icon-forward mui-pull-right"></a>
+            </div>
+        </div>
+        <div class="mui-input-row" style="height: auto;">
+            <label>详细地址:</label>
+            <textarea id="textarea" style="max-height: 300px;resize: none"></textarea>
+        </div>
+    </form>
+
+</div>
+<script src="../js/mui.min.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: false
+    });
+    mui('.mui-scroll-wrapper').scroll();
+    var mask01=mui.createMask(function () {
+        $('#add').animate({bottom:"-300px"},500);
+        setTimeout(function () {
+            document.querySelector('#add').classList.add('flag');
+        },500);
+    });
+    mui.ready(function () {
+        document.querySelector('.area').addEventListener('click',function () {
+            var add=document.querySelector('#add');
+            if(add.classList.contains('flag')){
+                add.classList.remove('flag');
+                $('#add').animate({bottom:"0px"},500);
+                mask01.show();
+            }
+        });
+    });
+    var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
+    var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
+    var item2 = document.getElementById('item2mobile');
+    var item3 = document.getElementById('item3mobile');
+    document.getElementById('slider').addEventListener('slide', function(e) {
+        if (e.detail.slideNumber === 1) {
+            if (item2.querySelector('.mui-loading')) {
+                setTimeout(function () {
+                    item2.querySelector('.mui-scroll').innerHTML = html2;
+                }, 500);
+            }
+        } else if (e.detail.slideNumber === 2) {
+            if (item3.querySelector('.mui-loading')) {
+                setTimeout(function () {
+                    item3.querySelector('.mui-scroll').innerHTML = html3;
+                }, 500);
+            }
+        }
+    });
+</script>
 </body>
 </html>
