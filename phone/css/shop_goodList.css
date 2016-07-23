@@ -130,3 +130,6 @@ input {
     height: 100%;
     border: none;
 }
+#offCanvasSide{
+    background-color: #ffffff;
+}

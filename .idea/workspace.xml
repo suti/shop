@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbed3bcd-91d0-4b32-a62d-d68fa3f02550" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/iconfont.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/iconfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/iconfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/iconfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phone/css/fonts/ux_1468733842_4011078/iconfont.woff" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phone/APP_shop/shop_person.html" afterPath="$PROJECT_DIR$/phone/APP_shop/shop_person.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phone/css/shop_icon.css" afterPath="$PROJECT_DIR$/phone/css/shop_icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html" afterPath="$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phone/config.xml" afterPath="$PROJECT_DIR$/phone/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phone/css/shop_goodList.css" afterPath="$PROJECT_DIR$/phone/css/shop_goodList.css" />
     </list>
     <ignored path="2016.07.09.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,57 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shop_person_address_add.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person_address_add.html">
+      <file leaf-file-name="shop_goodsLists.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+            <state relative-caret-position="345">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop_person.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person.html">
+      <file leaf-file-name="shop_goodList.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phone/css/shop_goodList.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="184" column="75" selection-start-line="184" selection-start-column="75" selection-end-line="184" selection-end-column="75" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#5;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop_icon.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone/css/shop_icon.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            <state relative-caret-position="558">
+              <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop_person_address_control.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person_address_control.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="87" column="38" selection-start-line="79" selection-start-column="12" selection-end-line="87" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -112,10 +75,8 @@
         <option value="$PROJECT_DIR$/phone/APP_shop/shop_goodLists.html" />
         <option value="$PROJECT_DIR$/phone/APP_shop/shop_index.html" />
         <option value="$PROJECT_DIR$/phone/APP_shop/temp.html" />
-        <option value="$PROJECT_DIR$/phone/css/shop_goodList.css" />
         <option value="$PROJECT_DIR$/phone/css/fonts/shop_icon.css" />
         <option value="$PROJECT_DIR$/phone/css/shop_goodsContent.css" />
-        <option value="$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html" />
         <option value="$PROJECT_DIR$/phone/APP_shop/shop_person_address.html" />
         <option value="$PROJECT_DIR$/phone/APP_shop/shop_cart.html" />
         <option value="$PROJECT_DIR$/phone/APP_shop/shop_person_order.html" />
@@ -126,6 +87,8 @@
         <option value="$PROJECT_DIR$/phone/css/shop_icon02.css" />
         <option value="$PROJECT_DIR$/phone/css/shop_icon.css" />
         <option value="$PROJECT_DIR$/phone/APP_shop/shop_person.html" />
+        <option value="$PROJECT_DIR$/phone/css/shop_goodList.css" />
+        <option value="$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html" />
       </list>
     </option>
   </component>
@@ -136,8 +99,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="455" />
-    <option name="y" value="23" />
+    <option name="x" value="476" />
+    <option name="y" value="41" />
     <option name="width" value="784" />
     <option name="height" value="777" />
   </component>
@@ -263,7 +226,7 @@
       <workItem from="1468472979951" duration="107000" />
       <workItem from="1468473243067" duration="108414000" />
       <workItem from="1468838381352" duration="63073000" />
-      <workItem from="1469251370254" duration="8523000" />
+      <workItem from="1469251370254" duration="9887000" />
     </task>
     <task id="LOCAL-00001" summary="2016.07.18">
       <created>1468920914769</created>
@@ -293,14 +256,21 @@
       <option name="project" value="LOCAL" />
       <updated>1469193161208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2016.07.23:16:39">
+      <created>1469263120703</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1469263120703</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181602000" />
+    <option name="totallyTimeSpent" value="182966000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="455" y="23" width="784" height="777" extended-state="0" />
+    <frame x="476" y="41" width="784" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29357797" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -338,7 +308,8 @@
     <MESSAGE value="2016.07.21" />
     <MESSAGE value="2016.07.21:21:58" />
     <MESSAGE value="2016.07.22:21:13" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016.07.22:21:13" />
+    <MESSAGE value="2016.07.23:16:39" />
+    <option name="LAST_COMMIT_MESSAGE" value="2016.07.23:16:39" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -352,11 +323,11 @@
         <state relative-caret-position="2025">
           <caret line="135" column="14" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -366,10 +337,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#5;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#5;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -436,6 +407,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -533,13 +505,6 @@
     <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_goodLists_content.html" />
     <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_goodLists.html" />
     <entry file="file://$PROJECT_DIR$/phone/css/fonts/shop_icon.css" />
-    <entry file="file://$PROJECT_DIR$/phone/css/shop_goodList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phone/APP_shop/temp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -564,16 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3146">
           <caret line="52" column="33" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="126" column="29" selection-start-line="126" selection-start-column="29" selection-end-line="126" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,16 +596,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person_address_add.html">
+    <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+        <state relative-caret-position="18">
+          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
           <folding>
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#5;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -667,15 +621,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person.html">
+    <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_person_address_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="184" column="75" selection-start-line="184" selection-start-column="75" selection-end-line="184" selection-end-column="75" />
+        <state relative-caret-position="2085">
+          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#5;n#ul#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/css/shop_index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/css/shop_goodList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/APP_shop/shop_goodsLists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
