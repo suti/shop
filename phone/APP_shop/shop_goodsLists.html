@@ -18,23 +18,39 @@
     <!--菜单部分-->
     <aside id="offCanvasSide" class="mui-off-canvas-right">
         <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
-            <div class="mui-scroll">
+            <div class="mui-scroll" style="height: 100%;">
                 <div class="title">
                     <a>
-                        价格筛选
+                        筛选
                     </a>
                 </div>
-                <div style="margin: 10px 15px;bottom: 20px;">
-                    <button id="offCanvasHide" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
+                <div class="mui-bar" style="margin: 10px 15px;bottom: 20px;">
+                    <button id="offCanvasHide" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">确定</button>
                 </div>
                 <div class="content">
-                    这是可拖动式侧滑菜单示例，你可以在这里放置任何内容；关闭侧滑菜单有多种方式： 1.在手机屏幕任意位置向右拖动(drag)；2.点击本侧滑菜单页之外的任意位置; 3.点击如下红色按钮
-                    <span class="android-only">；4.Android手机按back键；5.Android手机按menu键
-                            </span>。
-
+                    <div class="list">
+                        <p>价格筛选</p>
+                        <div class="num">
+                            <input class="mui-numbox-input" type="number" />
+                            <a>~</a>
+                            <input class="mui-numbox-input" type="number" />
+                        </div>
+                        <p>库存</p>
+                        <div class="contains">
+                            <ul>
+                                <li>
+                                    <a>有货</a>
+                                </li>
+                                <li>
+                                    <a>无货</a>
+                                </li>
+                                <li>
+                                    <a>不限</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="title" style="margin-bottom: 25px;">侧滑列表示例</div>
-
             </div>
         </div>
     </aside>
@@ -203,8 +219,8 @@
     string+=document.querySelector('.mui-table-view').offsetWidth-120+'px';
     string+=';}';
     document.querySelector('head').innerHTML+=string;
-    var ulWidth=document.querySelector('ul').offsetWidth;
-    var wm=(ulWidth%160)/(ulWidth/180+1)+"px";
+    var ulWidth=document.querySelector('header').offsetWidth;
+    var wm=(ulWidth%160)/(Math.floor(ulWidth/160)+1)+"px";
 
     function pushList(data){
         var list=data;
@@ -287,7 +303,7 @@
                             "       </style>";
 //                    document.querySelector('.mui-pull-top-pocket').style.display="block";
 
-
+                    console.log(wm);
                 }else{
 //                    document.querySelector('.mui-pull-top-pocket').style.display="hidden";
                     document.querySelector('head style').remove();

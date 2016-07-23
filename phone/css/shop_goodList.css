@@ -133,3 +133,36 @@ input {
 #offCanvasSide{
     background-color: #ffffff;
 }
+#offCanvasSide .title a{
+    color: #000;
+    font-size:20px;
+}
+#offCanvasSide .content{
+    padding:10px;
+}
+#offCanvasSide .num{
+    margin: 10px;
+}
+#offCanvasSide a{
+    color: #000;
+}
+#offCanvasSide .content input{
+    width:40%;
+}
+#offCanvasSide ul{
+    margin:0;
+    padding:0;
+
+}
+#offCanvasSide .contains li{
+    list-style: none;
+    width:30%;
+    margin-right:4px;
+    height:40px;
+    float: left;
+    text-align: center;
+    box-shadow: 0 0 1px rgba(0,0,0,.85);
+}
+#offCanvasSide .contains li a{
+    line-height: 40px;
+}
